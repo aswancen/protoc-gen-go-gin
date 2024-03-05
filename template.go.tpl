@@ -34,7 +34,6 @@ func (resp default{{$.Name}}Resp) Error(ctx *gin.Context, err error) {
 	status := 500
 	
 	if err == nil {
-		msg += ", err is nil"
 		resp.response(ctx, status, nil)
 		return
 	}
